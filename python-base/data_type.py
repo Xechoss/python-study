@@ -30,6 +30,15 @@ print(s + '.')
 print('hello\nworld')
 # s[0] = 'H'  # TypeError: 'str' object does not support item assignment
 
+# 列表
+l = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+print('列表', l, type(l))
+print(l[:5])
+print(l[::2])
+print(l[::-1])
+l[0] = -1
+print(l)
+
 # 元组
 t = (5, 'str', 1 + 3j)
 print(t[1])
