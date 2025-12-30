@@ -41,11 +41,19 @@ x20 = np.arange(4)
 y20 = np.random.randint(20, 50, 4)
 y21 = np.random.randint(10, 60, 4)
 plt.figure(figsize=(6, 4), dpi=120)
-# 通过横坐标的偏移，让两组数据对应的柱子分开，width参数控制柱子的粗细，label参数为柱子添加标签
+# 通过横坐标的偏移，让两组数据对应的柱子分开，width：柱子粗细，label：柱子标签
 plt.bar(x20 - 0.1, y20, width=0.2, label='A')
 plt.bar(x20 + 0.1, y21, width=0.2, label='B')
-# 定制横轴的刻度
+# 横轴的刻度
 plt.xticks(x20, labels=['Q1', 'Q2', 'Q3', 'Q4'])
 # 定制显示图例
-plt.legend()
+# plt.legend()
+# plt.show()
+
+labels = ['Q1', 'Q2', 'Q3', 'Q4']
+plt.figure(figsize=(6, 4), dpi=120)
+plt.bar(labels, y20, width=0.4, label='A')
+# 注意：堆叠柱状图的关键是将之前的柱子作为新柱子的底部，可以通过bottom参数指定底部数据，新柱子绘制在底部数据之上
+plt.bar(labels, y21, width=0.4, bottom=y21, label='B')
+plt.legend(loc='lower right')
 plt.show()
