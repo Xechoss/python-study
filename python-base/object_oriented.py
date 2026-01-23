@@ -35,6 +35,21 @@ def goto_sleep(person: Person):
     person.sleep()
 
 
+class Animal:
+    def __init__(self, name):
+        self.name = name
+
+
+class Runnable:
+    def run(self):
+        print('Running...')
+
+
+class Dog(Animal, Runnable):
+    def run(self):
+        print('Dog Running...')
+
+
 if __name__ == '__main__':
     student = Student("张三", 18, 100)
     teacher = Teacher("李老师", 30)

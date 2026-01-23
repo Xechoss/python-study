@@ -38,4 +38,4 @@ if __name__ == '__main__':
     student2 = Student2()
     student2.score = 90
     print(student2.score)
-    student2.score(999)
+    student2.score = 999
